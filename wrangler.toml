@@ -1,0 +1,23 @@
+name = "ansiedade-liberdade-clara-workers"
+main = "worker.js"
+compatibility_date = "2024-01-15"
+account_id = ""
+
+[env.production]
+name = "ansiedade-liberdade-clara-prod"
+route = "vitormaria.com.br/*"
+zone_id = ""
+
+[[kv_namespaces]]
+binding = "ASSETS"
+id = ""
+
+[build]
+command = "npm install"
+cwd = "./"
+
+[build.upload]
+format = "service-worker"
+
+[triggers.crons]
+crons = []

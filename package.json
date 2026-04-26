@@ -1,0 +1,15 @@
+{
+  "name": "ansiedade-liberdade-clara-workers",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.4",
+    "@cloudflare/workers-types": "^4.20250106.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.45.0"
+  }
+}
