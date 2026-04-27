@@ -1629,12 +1629,6 @@ document.addEventListener('DOMContentLoaded', function() {
         clearErrors();
     }
 
-    document.getElementById('modalCancel').addEventListener('click', closeCheckoutModal);
-
-    emailWhatsAppModal.addEventListener('click', (e) => {
-        if (e.target === emailWhatsAppModal) closeCheckoutModal();
-    });
-
     // Formatação de WhatsApp
     function formatWhatsapp(value) {
         const cleaned = value.replace(/\D/g, '');
@@ -1875,6 +1869,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Modal close handlers - inside DOMContentLoaded
+    if (document.getElementById('modalCancel')) {
+        document.getElementById('modalCancel').addEventListener('click', closeCheckoutModal);
+    }
+
+    emailWhatsAppModal.addEventListener('click', (e) => {
+        if (e.target === emailWhatsAppModal) closeCheckoutModal();
+    });
+
     // Meta Pixel Init
     (function() {
         const PIXEL_ID = '1012918748574251';
@@ -1978,9 +1981,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
-
-});
-</script>
 
 </body>
 </html>
