@@ -143,8 +143,52 @@
             color: #cccccc;
         }
 
+        section.bg-dark .black-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-orange);
+        }
+
+        section.bg-dark .black-box h3 {
+            color: var(--white);
+        }
+
+        section.bg-dark .option {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+        }
+
+        section.bg-dark .option h3 {
+            color: var(--white);
+        }
+
+        section.bg-dark .option p {
+            color: #cccccc;
+        }
+
         .text-center {
             text-align: center;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-orange), #fbbf24);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
         }
 
         /* Pills */
@@ -175,6 +219,13 @@
         }
 
         /* Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -195,6 +246,188 @@
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .card h4 {
+            margin-top: 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Pricing Two Column */
+        .pricing-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .pricing-col-left {
+            padding: 0;
+        }
+
+        .pricing-left-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 38px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-benefit-item {
+            display: block;
+            padding: 4px 0;
+            font-size: 15px;
+            color: var(--text-dark);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        .pricing-col-right {
+            padding: 0;
+        }
+
+        .pricing-offer-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 38px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card-image {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 0 12px 0;
+            aspect-ratio: 2 / 1;
+        }
+
+        .pricing-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Pricing Box - Legacy */
+        .pricing-box {
+            background: var(--white);
+            border: 3px solid var(--accent-orange);
+            border-radius: 12px;
+            padding: 50px 40px;
+            text-align: center;
+            margin: 50px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 20px 60px rgba(255, 107, 53, 0.15);
+        }
+
+        .urgency-badge {
+            display: inline-block;
+            background: var(--accent-red);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .price-original {
+            font-size: 18px;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+
+        .price-main {
+            font-size: 56px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .price-installment {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        /* Creator Section */
+        .creator-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .creator-text {
+            padding: 0;
+        }
+
+        .creator-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .creator-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 2px solid var(--accent-orange);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
         /* Accordion */
@@ -222,7 +455,6 @@
             align-items: center;
             transition: all 0.3s ease;
             user-select: none;
-            color: var(--text-dark);
         }
 
         .accordion-header:hover {
@@ -233,11 +465,470 @@
             padding: 20px;
             background: var(--white);
             display: none;
-            color: var(--text-dark);
+            color: var(--text-light);
         }
 
         .accordion-content.active {
             display: block;
+        }
+
+        /* Qualification Box */
+        .qualification-box {
+            background: transparent;
+            border: 3px solid var(--accent-orange);
+            border-radius: 20px;
+            padding: 60px 50px;
+            margin: 40px 0;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .qualification-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 50px;
+            text-align: left;
+        }
+
+        .qualification-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .qualification-check {
+            font-size: 28px;
+            color: var(--accent-green);
+            font-weight: bold;
+            flex-shrink: 0;
+            min-width: 40px;
+        }
+
+        .qualification-item p {
+            color: var(--white);
+            font-size: 17px;
+            line-height: 1.6;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Black Box */
+        .black-box {
+            background: var(--white);
+            border: 3px solid var(--black);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .black-box h3 {
+            color: var(--black);
+        }
+
+        /* Alert Box */
+        .alert-box {
+            border-left: 4px solid;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .alert-red {
+            border-color: #ef4444;
+            background: #fee2e2;
+        }
+
+        .alert-red h4 {
+            color: #dc2626;
+        }
+
+        .alert-red p {
+            color: #991b1b;
+        }
+
+        .alert-green {
+            border-color: var(--accent-green);
+            background: #dcfce7;
+        }
+
+        .alert-green h4 {
+            color: #166534;
+        }
+
+        .alert-green p {
+            color: #15803d;
+        }
+
+        /* Two Options New */
+        .two-options-new {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 35px 0;
+        }
+
+        .option-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: relative;
+        }
+
+        .option-icon-large {
+            font-size: 60px;
+            margin: 8px 0 12px 0;
+            line-height: 1;
+        }
+
+        .option-good {
+            border: 2px solid #22c55e;
+            transform: scale(1.02);
+        }
+
+        .option-bad {
+            opacity: 0.85;
+        }
+
+        /* Legacy Two Options */
+        .two-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .option {
+            padding: 40px;
+            border-radius: 12px;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .option h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .option-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--white);
+            border: 2px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .testimonial-stars {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Benefits with Image */
+        .benefits-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .benefits-image {
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .benefits-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 40px;
+        }
+
+        .benefit-item {
+            padding: 0;
+            text-align: left;
+            position: relative;
+        }
+
+        .benefit-number {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+
+        .benefit-item h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .benefit-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        /* Antes e Depois */
+        .antes-depois {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 35px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .antes-depois-item {
+            text-align: center;
+        }
+
+        .antes-depois-image {
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .antes-depois-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .antes-depois-seta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        /* Deliverables Section */
+        .deliverable-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .deliverable-row.reverse {
+            direction: rtl;
+        }
+
+        .deliverable-row.reverse > * {
+            direction: ltr;
+        }
+
+        .deliverable-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .deliverable-text p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .deliverable-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .deliverable-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Margin Helpers */
+        .mt-40 { margin-top: 40px; }
+        .mb-40 { margin-bottom: 40px; }
+        .mt-60 { margin-top: 60px; }
+        .mb-60 { margin-bottom: 40px; }
+
+        /* Guarantee Box */
+        .guarantee-box {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(124, 58, 237, 0.05));
+            border: 2px solid var(--accent-orange);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .pills-container {
+                flex-direction: column;
+            }
+
+            .pill {
+                justify-content: center;
+            }
+
+            .two-options-new {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .option-card {
+                padding: 30px 25px;
+            }
+
+            .option-good {
+                transform: scale(1);
+            }
+
+            .creator-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .two-options {
+                grid-template-columns: 1fr;
+            }
+
+            .price-main {
+                font-size: 42px;
+            }
+
+            .deliverable-row {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 50px;
+            }
+
+            .deliverable-row.reverse {
+                direction: ltr;
+            }
+
+            .deliverable-text h3 {
+                font-size: 24px;
+            }
+
+            .antes-depois {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .antes-depois-seta {
+                transform: rotate(90deg);
+                margin: 20px 0;
+            }
+
+            .benefits-with-image {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+                gap: 20px 30px;
+            }
+
+            .benefit-number {
+                font-size: 32px;
+            }
+
+            .benefit-item h4 {
+                font-size: 18px;
+            }
+
+            .benefit-item p {
+                font-size: 14px;
+            }
+
+            .qualification-box {
+                padding: 40px 30px;
+            }
+
+            .qualification-grid {
+                grid-template-columns: 1fr;
+                gap: 25px 40px;
+            }
+
+            .qualification-item p {
+                font-size: 16px;
+            }
+
+            .qualification-check {
+                font-size: 24px;
+                min-width: 35px;
+            }
+
+            .pricing-two-col {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .pricing-benefit-item {
+                font-size: 15px;
+                padding: 5px 0;
+            }
+
+            .pricing-offer-card {
+                padding: 25px;
+            }
         }
 
         /* Modal Styles */
@@ -404,49 +1095,27 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        .urgency-badge {
-            display: inline-block;
-            background: var(--accent-red);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 32px;
-            }
-
-            h2 {
-                font-size: 28px;
+        @media (max-width: 480px) {
+            .modal-content {
+                padding: 24px;
+                width: 95%;
             }
 
             .modal-buttons {
                 grid-template-columns: 1fr;
-            }
-
-            .modal-content {
-                padding: 24px;
-                width: 95%;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- ====== SEÇÃO 1: HERO COM CTA ====== -->
 <section class="bg-light">
     <div class="container text-center">
         <div class="urgency-badge">⏰ Últimas horas</div>
+
         <h1>Implemente o Protocolo <span class="highlight-orange">1 Dia Sem Ansiedade</span> e Recupere Sua Liberdade</h1>
+
         <p style="font-size: 18px; margin-bottom: 30px;">Um protocolo prático que você implementa hoje e vivencia os resultados amanhã. Sem terapia, sem medicação.</p>
 
         <div class="pills-container">
@@ -455,175 +1124,464 @@
             <div class="pill"><span class="pill-check">✓</span> Resultados Imediatos</div>
         </div>
 
+        <!-- CTA BUTTON NO HERO - OTIMIZAÇÃO 1 -->
         <button class="btn btn-black" data-open-modal style="max-width: 400px; margin: 30px auto; display: block;">QUERO MEU 1 DIA SEM ANSIEDADE</button>
 
         <p style="font-size: 14px; color: var(--text-light); margin-top: 20px;">
             <span style="text-decoration: line-through;">R$ 1.297</span> — <span class="highlight-orange" style="font-weight: 700; font-size: 16px;">R$ 67,00 (94% OFF)</span>
         </p>
+
+        <div class="hero">
+            <div class="hero-image">
+                <img src="hero-mockup.png" alt="Seus Entregáveis">
+            </div>
+            <div style="text-align: left;">
+                <h3>Como Funciona o Protocolo</h3>
+                <p style="margin-top: 20px;">Um sistema estruturado que você começa amanhã de manhã e sente a transformação no mesmo dia.</p>
+                <ul class="features-list">
+                    <li>Entenda o mecanismo real da ansiedade</li>
+                    <li>Protocolo anti-crise para usar na hora</li>
+                    <li>Rotina da manhã que previne escalonamento</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- ====== SEÇÃO 2: ANTES E DEPOIS ====== -->
 <section class="bg-dark">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: 40px;">Você está cansado de acordar <span class="highlight-orange">acelerado?</span></h2>
-        <p style="text-align: center; font-size: 18px;">Acordar com o corpo em alerta, a mente acelerada, tentando técnicas que não funcionam... a culpa não é sua.</p>
+        <h2 class="text-center mb-60">Você está cansado de acordar <span class="highlight-orange">acelerado?</span></h2>
+
+        <div style="text-align: center; margin-bottom: 50px;">
+            <p style="font-size: 18px; color: #cccccc;">
+                Acordar com o corpo em alerta, a mente acelerada, tentando técnicas que não funcionam e ainda achando que é normal viver assim... <strong style="color: var(--white);">a culpa não é sua.</strong>
+            </p>
+            <p style="font-size: 18px; color: #cccccc; margin-top: 20px;">
+                Ninguém nunca te ensinou de verdade como sua mente funciona e como controlá-la. Mas agora, aqui, você vai aprender.
+            </p>
+        </div>
+
+        <div class="antes-depois">
+            <div class="antes-depois-item">
+                <div class="antes-depois-image">
+                    <img src="pessoa-triste.png" alt="Antes - Queimando dinheiro">
+                </div>
+                <h3 style="color: var(--white); margin-top: 20px;">SEM O PROTOCOLO</h3>
+                <p style="color: #cccccc;">Acordar acelerado todos os dias, técnicas que não funcionam, medicação em excesso, qualidade de vida reduzida.</p>
+            </div>
+
+            <div class="antes-depois-seta">
+                <div style="font-size: 32px; color: var(--accent-orange);">→</div>
+            </div>
+
+            <div class="antes-depois-item">
+                <div class="antes-depois-image">
+                    <img src="pessoa-feliz.png" alt="Depois - Com o Protocolo">
+                </div>
+                <h3 style="color: var(--white); margin-top: 20px;">COM O PROTOCOLO</h3>
+                <p style="color: #cccccc;">Acordar tranquilo, controlar ansiedade em minutos, recuperar liberdade real, viver seu melhor.</p>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- ====== SEÇÃO 3: O QUE VOCÊ RECEBE (COM TANGIBILIZAÇÃO) ====== -->
 <section>
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: 40px;">O Que Você Vai Receber</h2>
+        <h2 class="text-center mb-60">O Que Você Vai Receber</h2>
+
+        <!-- Entregável 1: Caixa do Protocolo -->
+        <div class="deliverable-row">
+            <div class="deliverable-text">
+                <h3>📦 Protocolo 1 Dia Sem Ansiedade</h3>
+                <p>O material completo e organizado do protocolo. Tudo embalado de forma profissional para você começar hoje mesmo. Contém o passo a passo exato que você precisa seguir para reduzir ansiedade em 24 horas.</p>
+                <ul class="features-list">
+                    <li>Estrutura do dia completa</li>
+                    <li>Rotina da manhã anti-crise</li>
+                    <li>Rotina da noite para desacelerar</li>
+                </ul>
+            </div>
+            <div class="deliverable-image">
+                <img src="produto-caixa.png" alt="Protocolo 1 Dia Sem Ansiedade">
+            </div>
+        </div>
+
+        <!-- Entregável 2: Cartão de Emergência -->
+        <div class="deliverable-row reverse">
+            <div class="deliverable-text">
+                <h3>📱 Cartão de Emergência (Digital)</h3>
+                <p>Um cartão rápido e prático que você consulta em momentos de crise. Sem necessidade de ler páginas inteiras — apenas os passos essenciais que você precisa fazer AGORA para sair da ansiedade em minutos.</p>
+                <ul class="features-list">
+                    <li>Acesso pelo celular anytime</li>
+                    <li>Versão simplificada do protocolo</li>
+                    <li>Passo a passo em 3 minutos</li>
+                </ul>
+            </div>
+            <div class="deliverable-image">
+                <img src="produto-cartao.png" alt="Cartão de Emergência">
+            </div>
+        </div>
+
+        <!-- Entregável 3: Plano do 1º Dia -->
+        <div class="deliverable-row">
+            <div class="deliverable-text">
+                <h3>📱 Plano do 1º Dia (Digital)</h3>
+                <p>Um guia visual e passo a passo para você seguir seu primeiro dia com o protocolo. Mostra exatamente quando acordar, o que fazer na manhã, qual a sequência correta dos procedimentos e como encerrar o dia para dormir melhor.</p>
+                <ul class="features-list">
+                    <li>Timeline do dia completo</li>
+                    <li>Horários sugeridos</li>
+                    <li>Checklist de implementação</li>
+                </ul>
+            </div>
+            <div class="deliverable-image">
+                <img src="produto-plano.png" alt="Plano do 1º Dia">
+            </div>
+        </div>
+
+        <!-- Entregável 4: Aula Completa -->
+        <div class="deliverable-row reverse">
+            <div class="deliverable-text">
+                <h3>💻 Aula Prática Completa (1h+)</h3>
+                <p>A aula que muda tudo. Mais de 1 hora explicando exatamente como sua mente funciona, por que ansiedade é uma resposta de proteção do cérebro e como você desliga isso permanentemente. Sem blablabla — apenas ciência prática e aplicável.</p>
+                <ul class="features-list">
+                    <li>Entenda o mecanismo da ansiedade</li>
+                    <li>Aprenda a reconhecer os gatilhos</li>
+                    <li>Acesso vitalício ao conteúdo</li>
+                </ul>
+            </div>
+            <div class="deliverable-image">
+                <img src="produto-aula.png" alt="Aula Prática Completa">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SEÇÃO 4: BENEFÍCIOS COM ILUSTRAÇÃO ====== -->
+<section class="bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-60">O Que Muda Quando Você Tem um Plano</h2>
+
+        <div class="benefits-with-image">
+            <div class="benefits-image">
+                <img src="beneficios-ilustracao.png" alt="Benefícios da transformação">
+            </div>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <h4 style="color: var(--white);">Entenda sua mente</h4>
+                    <p style="color: #cccccc;">Saiba como o cérebro funciona e por que ansiedade é um mecanismo de proteção.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <h4 style="color: var(--white);">Controle os sintomas</h4>
+                    <p style="color: #cccccc;">Saiba exatamente o que fazer quando a ansiedade bate e como sair dela em minutos.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <h4 style="color: var(--white);">Durma melhor</h4>
+                    <p style="color: #cccccc;">Rotina da noite pronta para desacelerar e dormir sem continuar em alerta.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">04</div>
+                    <h4 style="color: var(--white);">Comece o dia bem</h4>
+                    <p style="color: #cccccc;">Rotina da manhã que impede a escalada dos sintomas antes mesmo de começar.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">05</div>
+                    <h4 style="color: var(--white);">Recupere confiança</h4>
+                    <p style="color: #cccccc;">Centenas já vivem 1 dia sem ansiedade. Você consegue também.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">06</div>
+                    <h4 style="color: var(--white);">Tenha um plano real</h4>
+                    <p style="color: #cccccc;">Não é mais: 'vou tentar relaxar'. É: 'vou seguir exatamente esses passos'.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SEÇÃO 5: SOCIAL PROOF (TESTIMONIAIS) - OTIMIZAÇÃO 3 ====== -->
+<section>
+    <div class="container">
+        <h2 class="text-center mb-60">Resultados Reais de Clientes</h2>
+
         <div class="grid-3">
-            <div class="card">
-                <h3>📦 Protocolo Completo</h3>
-                <p>O material completo e organizado do protocolo. Passo a passo exato que você precisa seguir para reduzir ansiedade em 24 horas.</p>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-text">"Pela primeira vez em anos, consegui acordar sem sentir aquele pânico automático. A aula me mostrou exatamente por que meu corpo reagia assim."</div>
+                <div class="testimonial-author">Marina S.</div>
+                <div class="testimonial-role">São Paulo, SP</div>
             </div>
-            <div class="card">
-                <h3>📱 Cartão de Emergência</h3>
-                <p>Um cartão rápido e prático que você consulta em momentos de crise. Sem necessidade de ler páginas inteiras.</p>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-text">"O protocolo anti-crise mudou minha vida. Agora quando a ansiedade começa, eu sei exatamente o que fazer. Sem mais desespero."</div>
+                <div class="testimonial-author">Carlos M.</div>
+                <div class="testimonial-role">Rio de Janeiro, RJ</div>
             </div>
-            <div class="card">
-                <h3>💻 Aula Prática (1h+)</h3>
-                <p>A aula que muda tudo. Explicando exatamente como sua mente funciona e como desliga a ansiedade.</p>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-text">"Tentei terapia, medicação... nada funcionava. Essa aula me mostrou o que eu realmente estava fazendo errado. Recomendo!"</div>
+                <div class="testimonial-author">Juliana P.</div>
+                <div class="testimonial-role">Belo Horizonte, MG</div>
             </div>
         </div>
     </div>
 </section>
 
-<section>
-    <div class="container">
-        <h2 class="text-center" style="margin-bottom: 50px;">Preço Especial</h2>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            <p style="font-size: 18px; color: #999; margin-bottom: 20px;">Tudo isso deveria custar <strong style="color: #666;">R$ 1.297,00</strong>. Mas hoje, você tem acesso por:</p>
-            <div style="font-size: 48px; font-weight: 700; color: var(--accent-green); margin-bottom: 20px;">R$ 67,00</div>
-            <button class="btn btn-black" data-open-modal>QUERO MEU 1 DIA SEM ANSIEDADE AGORA</button>
-            <p style="font-size: 12px; margin-top: 20px; color: var(--text-light);">✓ Compra Segura • ✓ 7 Dias de Garantia</p>
-        </div>
-    </div>
-</section>
-
+<!-- ====== SEÇÃO 6: QUALIFICAÇÃO ====== -->
 <section class="bg-dark">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: 40px;">Perguntas Frequentes</h2>
+        <div class="qualification-box">
+            <h3 style="color: var(--white); margin-bottom: 40px; font-size: 32px;">✅ O Protocolo é Para Você Se:</h3>
+            <div class="qualification-grid">
+                <div class="qualification-item">
+                    <div class="qualification-check">✓</div>
+                    <p>Acorda com o corpo em alerta praticamente todos os dias</p>
+                </div>
+                <div class="qualification-item">
+                    <div class="qualification-check">✓</div>
+                    <p>Já tentou medicação, terapia e nada de verdade funciona</p>
+                </div>
+                <div class="qualification-item">
+                    <div class="qualification-check">✓</div>
+                    <p>Quer entender o mecanismo real por trás da ansiedade</p>
+                </div>
+                <div class="qualification-item">
+                    <div class="qualification-check">✓</div>
+                    <p>Está cansado de torrar dinheiro em soluções que não resolvem</p>
+                </div>
+                <div class="qualification-item">
+                    <div class="qualification-check">✓</div>
+                    <p>Quer recuperar sua vida sem depender de medicação contínua</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SEÇÃO 7: PRICING COM 2 COLUNAS ====== -->
+<section style="background: #f5f5f5; padding: 60px 0;">
+    <div class="container">
+        <div class="pricing-two-col">
+            <!-- Coluna Esquerda: Lista de Benefícios -->
+            <div class="pricing-col-left">
+                <div class="pricing-left-card">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 25px;">
+                        <div style="font-size: 32px;">📦</div>
+                        <h3 style="margin: 0; color: var(--text-dark); font-size: 26px; font-weight: 700;">Isso é tudo que você terá acesso</h3>
+                    </div>
+
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Aula Completa (1h+ explicando como a ansiedade funciona)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Protocolo 1 Dia Sem Ansiedade (estrutura completa)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Plano do 1º Dia (passo a passo visual)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Cartão de Emergência (para usar em crises)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Rotina da Manhã (roteiro pronto)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Protocolo Anti-Crise (técnicas práticas)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Rotina da Noite (para dormir sem alerta)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Aulas Semanais Ao Vivo (suporte contínuo)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> Acesso Vitalício (assista quando quiser)</li>
+                        <li class="pricing-benefit-item"><span style="color: #22c55e; font-weight: 700;">✓</span> 7 Dias de Garantia (sem perguntas)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Coluna Direita: Oferta -->
+            <div class="pricing-col-right">
+                <div class="pricing-offer-card">
+                    <!-- Imagem RETANGULAR -->
+                    <div class="pricing-card-image">
+                        <img src="hero-mockup.png" alt="Seus Produtos">
+                    </div>
+
+                    <!-- Texto descritivo -->
+                    <p style="color: #aaa; font-size: 13px; text-align: center; margin: 12px 0 14px 0; line-height: 1.4;">
+                        Tudo isso deveria custar <strong style="color: #999;">R$ 1.297,00</strong>. Mas hoje, você tem acesso por:
+                    </p>
+
+                    <!-- Preço -->
+                    <div style="text-align: center; margin: 12px 0;">
+                        <div style="font-size: 40px; font-weight: 700; color: #22c55e; margin-bottom: 0px; letter-spacing: -1px;">5X R$ 13,40</div>
+                        <div style="font-size: 12px; color: var(--text-light); margin: 4px 0 4px 0; font-weight: 500;">OU</div>
+                        <div style="font-size: 28px; font-weight: 700; color: var(--text-dark); margin-bottom: 0px;">R$ 67,00</div>
+                        <div style="font-size: 11px; color: var(--text-light); font-weight: 600;">À VISTA</div>
+                    </div>
+
+                    <!-- CTA -->
+                    <button data-open-modal style="width: 100%; padding: 13px; background: #22c55e; color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 15px; cursor: pointer; margin-bottom: 14px; transition: all 0.3s;">
+                        QUERO MEU 1 DIA SEM ANSIEDADE
+                    </button>
+
+                    <!-- Trust Signals -->
+                    <div style="display: flex; justify-content: space-around; align-items: center; padding-top: 12px; border-top: 1px solid #f0f0f0; gap: 8px;">
+                        <div style="text-align: center; flex: 1;">
+                            <div style="font-size: 16px; margin-bottom: 2px;">🛡️</div>
+                            <div style="font-size: 10px; font-weight: 600; color: #777;">Compra Segura</div>
+                        </div>
+                        <div style="text-align: center; flex: 1;">
+                            <div style="font-size: 16px; margin-bottom: 2px;">🔒</div>
+                            <div style="font-size: 10px; font-weight: 600; color: #777;">Privacidade Protegida</div>
+                        </div>
+                        <div style="text-align: center; flex: 1;">
+                            <div style="font-size: 16px; margin-bottom: 2px;">⭐</div>
+                            <div style="font-size: 10px; font-weight: 600; color: #777;">7 Dias de Garantia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SEÇÃO 8: DUAS OPÇÕES ====== -->
+<section style="background: white; padding: 60px 0;">
+    <div class="container">
+        <h2 class="text-center mb-60" style="color: var(--text-dark);">Agora você tem <span style="color: var(--accent-orange);">duas escolhas:</span></h2>
+
+        <div class="two-options-new">
+            <!-- Opção 1: NÃO RECOMENDADO -->
+            <div class="option-card option-bad">
+                <div style="display: inline-block; background: var(--accent-orange); color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 10px;">Opção 1</div>
+
+                <div class="option-icon-large">🔥</div>
+
+                <h3 style="color: var(--text-dark); font-size: 22px; font-weight: 700; margin: 8px 0 12px 0;">Permanecer refém da ansiedade</h3>
+
+                <p style="color: var(--text-light); font-size: 14px; line-height: 1.5; margin: 0;">
+                    Continuar acordando acelerado, tentando técnicas que não funcionam e achando que é normal viver assim.
+                </p>
+            </div>
+
+            <!-- Opção 2: RECOMENDADO -->
+            <div class="option-card option-good">
+                <div style="display: inline-block; background: #6366f1; color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 10px;">Opção 2</div>
+
+                <div class="option-icon-large">✅</div>
+
+                <h3 style="color: var(--text-dark); font-size: 22px; font-weight: 700; margin: 8px 0 12px 0;">Eliminar a ansiedade nas próximas 24 horas</h3>
+
+                <p style="color: var(--text-light); font-size: 14px; line-height: 1.5; margin: 0;">
+                    Investir em você agora, aprender como sua mente funciona e finalmente recuperar sua qualidade de vida.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 50px;">
+            <p style="font-size: 18px; margin-bottom: 15px; color: var(--text-dark);">Eu sei (e você também sabe):</p>
+            <p style="font-size: 28px; font-weight: 700; margin-bottom: 40px;">
+                <span style="color: #6366f1;">a opção 2 é a mais inteligente.</span>
+            </p>
+            <button class="btn btn-black" data-open-modal style="max-width: 400px; background: var(--black);">QUERO MEU 1 DIA SEM ANSIEDADE AGORA</button>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SEÇÃO 9: SOBRE O CRIADOR ====== -->
+<section class="bg-dark">
+    <div class="container">
+        <div class="creator-section">
+            <!-- Coluna Esquerda: Texto -->
+            <div class="creator-text">
+                <h2 style="color: var(--white); font-size: 42px; font-weight: 700; margin-bottom: 12px; line-height: 1.3;">
+                    Quem criou o protocolo: <span style="color: var(--accent-orange);">Vitor Maria</span>
+                </h2>
+
+                <p style="color: #cccccc; font-size: 18px; line-height: 1.6; margin-bottom: 14px; font-weight: 500;">
+                    <strong style="color: var(--white); display: block; margin-bottom: 5px; font-size: 20px;">Psicoterapeuta</strong>
+                    Com experiência prática no acompanhamento de pessoas com ansiedade e crises recorrentes.
+                </p>
+
+                <p style="color: #cccccc; font-size: 18px; line-height: 1.6; margin: 0; font-weight: 500;">
+                    Dezenas de pacientes já vivem seu 1 dia sem ansiedade utilizando este protocolo.
+                </p>
+            </div>
+
+            <!-- Coluna Direita: Imagem -->
+            <div class="creator-image">
+                <img src="criador-vitor.jpg" alt="Vitor Maria - Psicoterapeuta">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== SEÇÃO 9: FAQ ====== -->
+<section>
+    <div class="container">
+        <h2 class="text-center mb-60">Perguntas Frequentes</h2>
+
         <div class="accordion">
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Em quanto tempo vou ver resultado?</span>
+                    <span>Qual é a forma de pagamento?</span>
                     <span style="font-size: 24px;">+</span>
                 </div>
                 <div class="accordion-content">
-                    <p>Você começa a aplicar o protocolo amanhã de manhã e sente os primeiros resultados no mesmo dia. Muitos relatam mudanças em questão de horas.</p>
+                    <p>Você pode fazer o pagamento pelo Pix ou Cartão de Crédito. Processamos o pagamento de forma segura através da Kiwify.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Posso usar junto com medicamento ou terapia?</span>
+                    <span>O pagamento é seguro?</span>
                     <span style="font-size: 24px;">+</span>
                 </div>
                 <div class="accordion-content">
-                    <p>Sim, com certeza. O protocolo complementa terapia e medicação. Nunca interrompa medicação sem orientação médica.</p>
+                    <p>Sim! Utilizamos a Kiwify, uma das maiores plataformas de pagamento do Brasil. Seus dados estão 100% seguros com criptografia SSL.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>E se eu entrar e achar que não era o que eu esperava?</span>
+                    <span>Eu recebo acesso imediato?</span>
                     <span style="font-size: 24px;">+</span>
                 </div>
                 <div class="accordion-content">
-                    <p>Você tem 7 dias de garantia 100% reembolsável. Sem perguntas, sem complicações. Basta enviar um e-mail.</p>
+                    <p>Sim! Assim que finalizar a compra, você vai receber um e-mail com o link de acesso. Clique no link e comece a assistir imediatamente.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Quanto tempo leva para implementar as rotinas?</span>
+                    <span>E se não gostar?</span>
                     <span style="font-size: 24px;">+</span>
                 </div>
                 <div class="accordion-content">
-                    <p>Entre 15 a 30 minutos no início. Depois você automatiza tudo. É simples e prático.</p>
+                    <p>Você tem 7 dias de garantia 100% reembolsável. Sem perguntas, sem complicações. Basta enviar um e-mail para vitorsirino@icloud.com.</p>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Vou receber a Masterclass também?</span>
+                    <span>Por quanto tempo tenho acesso?</span>
                     <span style="font-size: 24px;">+</span>
                 </div>
                 <div class="accordion-content">
-                    <p>Sim! Você recebe tudo: protocolo, cartão, rotinas e as aulas semanais ao vivo para sempre.</p>
+                    <p>Você tem acesso vitalício à aula. Isso significa que você pode assistir quantas vezes quiser, quando quiser, para sempre.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- ====== SEÇÃO 10: FOOTER ====== -->
 <section class="bg-dark text-center">
     <div class="container">
         <p style="margin-bottom: 15px;">&copy; 2026 Vitor Maria. Todos os direitos reservados.</p>
-        <p style="font-size: 12px; opacity: 0.7;">Contato: <strong>vitorsirino@icloud.com</strong></p>
+        <p style="font-size: 12px; opacity: 0.7; margin-bottom: 10px;">
+            Este site não é afiliado a qualquer rede social. Resultados reais de clientes.
+        </p>
+        <p style="font-size: 12px; opacity: 0.7;">
+            Contato: <strong>vitorsirino@icloud.com</strong>
+        </p>
     </div>
 </section>
 
-<!-- Modal -->
-<div class="modal-overlay" id="checkoutModal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Última Etapa</h2>
-            <p>Para garantir seu acesso, precisamos de seus dados.</p>
-        </div>
-
-        <form class="modal-form" onsubmit="return false;">
-            <div class="form-group">
-                <label for="emailInput">Email <span class="required">*</span></label>
-                <input type="email" id="emailInput" placeholder="seu@email.com" autocomplete="email" />
-                <div class="error-message" id="emailError"></div>
-            </div>
-
-            <div class="form-group">
-                <label for="whatsappInput">WhatsApp <span class="required">*</span></label>
-                <input type="tel" id="whatsappInput" placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel" />
-                <div id="whatsappStatus"></div>
-                <div class="error-message" id="whatsappError"></div>
-            </div>
-        </form>
-
-        <div class="modal-buttons">
-            <button type="button" class="btn-cancel" id="modalCancel">Voltar</button>
-            <button type="button" class="btn-submit" id="modalSubmit">Continuar para Compra</button>
-        </div>
-    </div>
-</div>
-
 <script>
-    const emailInput = document.getElementById('emailInput');
-    const whatsappInput = document.getElementById('whatsappInput');
-    const checkoutModal = document.getElementById('checkoutModal');
-    let validationTimeout;
-    let isWhatsappValid = false;
-
-    // Open/Close Modal
-    document.querySelectorAll('[data-open-modal]').forEach(btn => {
-        btn.addEventListener('click', () => {
-            checkoutModal.classList.add('active');
-            emailInput.focus();
-        });
-    });
-
-    document.getElementById('modalCancel').addEventListener('click', () => {
-        checkoutModal.classList.remove('active');
-        clearErrors();
-    });
-
-    checkoutModal.addEventListener('click', (e) => {
-        if (e.target === checkoutModal) {
-            checkoutModal.classList.remove('active');
-            clearErrors();
-        }
-    });
-
-    // Accordion
+    // Accordion functionality
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', function() {
             const content = this.nextElementSibling;
@@ -641,7 +1599,43 @@
         });
     });
 
-    // WhatsApp Formatting
+    // Modal de Email + WhatsApp
+    const emailWhatsAppModal = document.getElementById('emailWhatsAppModal');
+    const emailInput = document.getElementById('emailInput');
+    const whatsappInput = document.getElementById('whatsappInput');
+    let validationTimeout;
+    let isWhatsappValid = false;
+
+    // Abrir modal quando clicar em CTA
+    document.querySelectorAll('[data-open-modal]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openCheckoutModal();
+        });
+    });
+
+    function openCheckoutModal() {
+        emailWhatsAppModal.classList.add('active');
+        emailInput.focus();
+        emailInput.value = '';
+        whatsappInput.value = '';
+        isWhatsappValid = false;
+        clearErrors();
+    }
+
+    function closeCheckoutModal() {
+        emailWhatsAppModal.classList.remove('active');
+        clearErrors();
+    }
+
+    document.getElementById('modalClose').addEventListener('click', closeCheckoutModal);
+    document.getElementById('modalCancel').addEventListener('click', closeCheckoutModal);
+
+    emailWhatsAppModal.addEventListener('click', (e) => {
+        if (e.target === emailWhatsAppModal) closeCheckoutModal();
+    });
+
+    // Formatação de WhatsApp
     function formatWhatsapp(value) {
         const cleaned = value.replace(/\D/g, '');
         const withoutCountryCode = cleaned.startsWith('55') ? cleaned.slice(2) : cleaned;
@@ -656,12 +1650,14 @@
         }
     }
 
+    // Validar formato WhatsApp
     function isValidWhatsappFormat(value) {
         const cleaned = value.replace(/\D/g, '');
         const withoutCountryCode = cleaned.startsWith('55') ? cleaned.slice(2) : cleaned;
         return withoutCountryCode.length === 11;
     }
 
+    // Validar WhatsApp com API
     async function validateWhatsappWithApi(phoneNumber) {
         const cleaned = phoneNumber.replace(/\D/g, '');
         const withoutCountryCode = cleaned.startsWith('55') ? cleaned.slice(2) : cleaned;
@@ -684,7 +1680,9 @@
                     'Content-Type': 'application/json',
                     'token': 'dfe5c844-a39e-4ab6-9223-dcf40b442e1d',
                 },
-                body: JSON.stringify({ numbers: [fullNumber] }),
+                body: JSON.stringify({
+                    numbers: [fullNumber],
+                }),
             });
 
             if (!response.ok) throw new Error('Erro na validação');
@@ -692,7 +1690,8 @@
             const data = await response.json();
 
             if (Array.isArray(data) && data.length > 0) {
-                if (data[0].isInWhatsapp) {
+                const result = data[0];
+                if (result.isInWhatsapp) {
                     isWhatsappValid = true;
                     statusEl.className = 'validation-status valid';
                     statusEl.textContent = '✓ Válido';
@@ -709,6 +1708,7 @@
             isWhatsappValid = false;
             statusEl.className = 'validation-status error';
             statusEl.textContent = '✗ Erro na validação';
+            setError('whatsapp', 'Erro ao validar WhatsApp. Tente novamente.');
         }
     }
 
@@ -729,6 +1729,12 @@
 
     emailInput.addEventListener('input', () => clearError('email'));
 
+    // Validação e envio
+    function isValidEmail(value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(value);
+    }
+
     function setError(field, message) {
         const errorEl = document.getElementById(`${field}Error`);
         if (errorEl) errorEl.textContent = message;
@@ -745,43 +1751,69 @@
         document.getElementById('whatsappStatus').textContent = '';
     }
 
-    function isValidEmail(value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(value);
-    }
-
     function getCookie(name) {
         const value = `; ${document.cookie}`;
         const parts = value.split(`; ${name}=`);
-        return parts.length === 2 ? parts.pop().split(';').shift() : null;
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift() || null;
+        }
+        return null;
+    }
+
+    function getFbc() {
+        const cookieFbc = getCookie('_fbc');
+        if (cookieFbc) return cookieFbc;
+
+        const url = new URL(window.location.href);
+        const fbclid = url.searchParams.get('fbclid');
+
+        if (!fbclid) return null;
+
+        return `fb.1.${Date.now()}.${fbclid}`;
     }
 
     function getOrCreateExternalId() {
-        let externalId = localStorage.getItem('external_id');
+        const storageKey = 'external_id';
+        let externalId = localStorage.getItem(storageKey);
+
         if (!externalId) {
             externalId = `ext_${Date.now()}_${Math.random().toString(16).slice(2)}`;
-            localStorage.setItem('external_id', externalId);
+            localStorage.setItem(storageKey, externalId);
         }
+
         return externalId;
     }
 
+    function generateEventId(prefix = 'ic') {
+        return `${prefix}_${Date.now()}_${Math.random().toString(16).slice(2)}`;
+    }
+
     document.getElementById('modalSubmit').addEventListener('click', async () => {
+        // Validar campos
         let hasErrors = false;
 
-        if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
-            setError('email', isValidEmail(emailInput.value) ? 'Email é obrigatório' : 'Email inválido');
+        if (!emailInput.value.trim()) {
+            setError('email', 'Email é obrigatório');
+            hasErrors = true;
+        } else if (!isValidEmail(emailInput.value)) {
+            setError('email', 'Email inválido');
             hasErrors = true;
         }
 
-        if (!whatsappInput.value.trim() || !isValidWhatsappFormat(whatsappInput.value) || !isWhatsappValid) {
-            const msg = !whatsappInput.value.trim() ? 'WhatsApp é obrigatório' :
-                       !isValidWhatsappFormat(whatsappInput.value) ? 'WhatsApp inválido' : 'WhatsApp não foi validado';
-            setError('whatsapp', msg);
+        if (!whatsappInput.value.trim()) {
+            setError('whatsapp', 'WhatsApp é obrigatório');
+            hasErrors = true;
+        } else if (!isValidWhatsappFormat(whatsappInput.value)) {
+            setError('whatsapp', 'WhatsApp inválido');
+            hasErrors = true;
+        } else if (!isWhatsappValid) {
+            setError('whatsapp', 'WhatsApp não foi validado');
             hasErrors = true;
         }
 
         if (hasErrors) return;
 
+        // Desabilitar botões
         const submitBtn = document.getElementById('modalSubmit');
         const cancelBtn = document.getElementById('modalCancel');
         submitBtn.disabled = true;
@@ -789,40 +1821,53 @@
         submitBtn.textContent = 'Processando...';
 
         try {
-            const eventId = `ic_${Date.now()}_${Math.random().toString(16).slice(2)}`;
+            const eventId = generateEventId('ic');
             const external_id = getOrCreateExternalId();
             const fbp = getCookie('_fbp');
-            const email = emailInput.value.toLowerCase().trim();
-            const phoneClean = whatsappInput.value.replace(/\D/g, '');
-            const phoneFormatted = phoneClean.startsWith('55') ? phoneClean : '55' + phoneClean;
+            const fbc = getFbc();
 
-            // Meta Pixel track
+            // Pixel InitiateCheckout
             if (window.fbq) {
                 window.fbq('track', 'InitiateCheckout', {}, { eventID: eventId });
             }
 
-            // Send to n8n webhook
+            // Hash SHA-256 (email e telefone)
+            const email = emailInput.value.toLowerCase().trim();
+            const phoneClean = whatsappInput.value.replace(/\D/g, '');
+            const phoneFormatted = phoneClean.startsWith('55') ? phoneClean : '55' + phoneClean;
+
+            const emailHash = sha256(email);
+            const phoneHash = sha256(phoneFormatted);
+
+            // Webhook n8n
             await fetch('https://n8n.vitormaria.com.br/webhook/ic', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify({
                     event_name: 'InitiateCheckout',
                     event_id: eventId,
                     external_id,
                     fbp,
+                    fbc,
+                    email_hash: emailHash,
+                    phone_hash: phoneHash,
                     email_raw: email,
                     phone_raw: phoneFormatted,
                     url: window.location.href,
                     target_url: 'https://pay.kiwify.com.br/aQsvDX3',
                 }),
-            }).catch(err => console.error('Webhook error:', err));
+            });
 
-            // Redirect to Kiwify
+            // Redirecionar para Kiwify
+            const checkoutUrl = `https://pay.kiwify.com.br/aQsvDX3?s1=${encodeURIComponent(external_id)}&s2=${encodeURIComponent(eventId)}`;
+
             setTimeout(() => {
-                window.location.href = `https://pay.kiwify.com.br/aQsvDX3?s1=${encodeURIComponent(external_id)}&s2=${encodeURIComponent(eventId)}`;
+                window.location.href = checkoutUrl;
             }, 300);
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Erro ao processar checkout:', error);
             setError('email', 'Erro ao processar. Tente novamente.');
             submitBtn.disabled = false;
             cancelBtn.disabled = false;
@@ -830,15 +1875,18 @@
         }
     });
 
-    // Meta Pixel PageView
+    // Meta Pixel Init
     (function() {
         const PIXEL_ID = '1012918748574251';
+        const PAGEVIEW_WEBHOOK_URL = 'https://n8n.vitormaria.com.br/webhook/pageview';
 
         function initPixel() {
             if (window.fbq) return;
+
             window.fbq = function(...args) {
                 (window.fbq.queue = window.fbq.queue || []).push(args);
             };
+            window._fbq = window.fbq;
             window.fbq.loaded = true;
             window.fbq.version = '2.0';
             window.fbq.queue = [];
@@ -851,27 +1899,85 @@
             window.fbq('init', PIXEL_ID);
         }
 
+        function sendPageViewWebhook(eventId) {
+            const fbp = getCookie('_fbp');
+            const fbc = getFbc();
+            const external_id = getOrCreateExternalId();
+
+            fetch(PAGEVIEW_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'omit',
+                keepalive: true,
+                body: JSON.stringify({
+                    event_name: 'PageView',
+                    event_id: eventId,
+                    external_id,
+                    fbp,
+                    fbc,
+                    url: window.location.href,
+                }),
+            }).catch(err => console.error('Erro ao enviar PageView:', err));
+        }
+
         initPixel();
+
+        const noscript = document.createElement('noscript');
+        noscript.innerHTML = `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1" alt="" />`;
+        document.body.appendChild(noscript);
 
         setTimeout(() => {
             const eventId = `pv_${Date.now()}_${Math.random().toString(16).slice(2)}`;
             if (window.fbq) window.fbq('track', 'PageView', {}, { eventID: eventId });
-
-            // PageView webhook
-            fetch('https://n8n.vitormaria.com.br/webhook/pageview', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    event_name: 'PageView',
-                    event_id: eventId,
-                    external_id: getOrCreateExternalId(),
-                    fbp: getCookie('_fbp'),
-                    url: window.location.href,
-                }),
-            }).catch(err => console.error('PageView webhook error:', err));
+            sendPageViewWebhook(eventId);
         }, 2000);
     })();
 </script>
+
+<!-- Modal de Email + WhatsApp -->
+<div class="modal-overlay" id="emailWhatsAppModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Última Etapa</h2>
+            <p>Para garantir seu acesso e enviarmos suporte via WhatsApp, precisamos de seus dados.</p>
+        </div>
+
+        <form class="modal-form" onsubmit="return false;">
+            <div class="form-group">
+                <label for="emailInput">
+                    Email <span class="required">*</span>
+                </label>
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="seu@email.com"
+                    autocomplete="email"
+                />
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="whatsappInput">
+                    WhatsApp <span class="required">*</span>
+                </label>
+                <input
+                    type="tel"
+                    id="whatsappInput"
+                    placeholder="(11) 99999-9999"
+                    maxlength="15"
+                    autocomplete="tel"
+                />
+                <div id="whatsappStatus"></div>
+                <div class="error-message" id="whatsappError"></div>
+            </div>
+        </form>
+
+        <div class="modal-buttons">
+            <button type="button" class="btn-cancel" id="modalCancel">Voltar</button>
+            <button type="button" class="btn-submit" id="modalSubmit">Continuar para Compra</button>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
