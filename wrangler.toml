@@ -1,6 +1,7 @@
 name = "ansiedade-liberdade-clara"
 compatibility_date = "2024-01-15"
 
-[assets]
-directory = "."
-binding = "ASSETS"
+[env.production]
+routes = [
+  { pattern = "vitormaria.com.br/*", zone_name = "vitormaria.com.br" }
+]
